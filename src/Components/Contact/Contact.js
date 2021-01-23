@@ -7,7 +7,7 @@ const Contact = () => {
      const { register, handleSubmit, errors } = useForm();
 
      const submitHandler = (data) => {
-          window.open(`mailto:ryuu887@gmail.com?subject=${data.subject}&body=Hi, I am ${data.name}.\ndata.message`)
+          window.open(`mailto:ryuu887@gmail.com?subject=${data.subject}&body=Hi, I am ${data.name}.\n${data.message}`)
      }
 
      return (

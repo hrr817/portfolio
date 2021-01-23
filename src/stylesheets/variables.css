@@ -1,0 +1,27 @@
+html {
+     --TEXT_COLOR: #0f0f0f;
+     --BACKGROUND_COLOR: #f8f8f1;
+     --BORDER_COLOR: #383838;
+     --TAGLINE_BG_COLOR: #695acdef;
+     --SVG_COLOR: #161616d3;
+     --INPUT_BACKGROUND_COLOR: #ececf3;
+     --SUBMIT_BG: linear-gradient(20deg, #ec8611d3, #ffe02fec);
+     --PILL_BG: rgba(255, 255, 255, 0.651);
+     --NAVBAR_BG: #f8f8f1b0;
+
+     transition: color 0.5s ease, background-color 0.5s ease;
+     color: var(--TEXT_COLOR);
+     background-color: var(--BACKGROUND_COLOR);
+}
+
+html[data-theme="dark"] {
+     --TEXT_COLOR: #ece9e9;
+     --BACKGROUND_COLOR: #383636;
+     --BORDER_COLOR: #c7c7c7;
+     --TAGLINE_BG_COLOR: #4f41aacb;
+     --SVG_COLOR: #f0efefd3;
+     --INPUT_BACKGROUND_COLOR: #3a393f;
+     --SUBMIT_BG: linear-gradient(30deg, #6e3ec7c2, #4058c0c2);
+     --PILL_BG: #0f0f0fa6;
+     --NAVBAR_BG: #383636c5;
+}

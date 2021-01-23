@@ -1,0 +1,98 @@
+@import '../../stylesheets/variables.css';
+
+.navbar {
+     position: sticky;
+     top: 0;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     width: 100%;
+     background: var(--NAVBAR_BG);
+     backdrop-filter: blur(50px);
+     z-index: 99;
+     height: 120px;
+}
+
+.object-container {
+     position: relative;
+     margin: 1em;
+     margin-right: 2em;
+     display: block;
+
+     --SQUARE_CONTANIER_SIZE: 4.5em;
+     --SQUARE_SIZE: 2.1em;
+     --SQUARE_BORDER_SIZE: 0.1em;
+     --REMAINING_SPACE_SIZE: calc(var(--SQUARE_CONTANIER_SIZE) - var(--SQUARE_SIZE));
+     --ANIMATION_DURATION: 5s;
+
+     width: var(--SQUARE_CONTANIER_SIZE);
+     height: var(--SQUARE_CONTANIER_SIZE);
+}
+
+.square {
+     position: absolute;
+     display: inline-flex;
+     align-items: center;
+     background: transparent;
+     border: var(--SQUARE_BORDER_SIZE) solid var(--BORDER_COLOR);
+     border-radius: 0.3em;
+     padding-left: 0.2em;
+
+     /*  P1 P2  */
+     /*  P3 P4  */
+     --POSITION_1: translate(0em, 0em);
+     --POSITION_2: translate(var(--REMAINING_SPACE_SIZE), 0em);
+     --POSITION_3: translate(0em, var(--REMAINING_SPACE_SIZE));
+     --POSITION_4: translate(var(--REMAINING_SPACE_SIZE), var(--REMAINING_SPACE_SIZE));
+
+     width: var(--SQUARE_SIZE);
+     height: var(--SQUARE_SIZE);
+     overflow: hidden;
+     will-change: transform;
+     transition: all 1s ease;
+     cursor: pointer;
+}
+
+.square:hover {
+     border-radius: 0.02em;
+}
+
+.one {
+     transform: var(--POSITION_1);
+}
+
+.two {
+     transform: var(--POSITION_2);
+}
+
+.three {
+     transform: var(--POSITION_3);
+}
+
+.setting {
+     position: absolute;
+     display: inline-flex;
+     width: var(--SQUARE_SIZE);
+     height: var(--SQUARE_SIZE);
+     transform: translate(var(--REMAINING_SPACE_SIZE), var(--REMAINING_SPACE_SIZE));
+}
+
+.setting span {
+     margin: auto;
+     width: 1.8em;
+     height: 1.8em;
+     cursor: pointer;
+}
+
+.setting span svg {
+     fill: var(--TEXT_COLOR);
+     width: 100%;
+     height: 100%;
+}
+
+.to-title {
+     width: auto;
+     padding: 1.5em 0;
+     font-size: 1.5em;
+     border-color: transparent;
+}

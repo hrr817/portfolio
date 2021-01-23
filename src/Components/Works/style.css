@@ -1,0 +1,186 @@
+@import '../../stylesheets//variables.css';
+
+.projects-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+}
+
+.projects-container * {
+     font-size: 0.95rem;
+}
+
+.box {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1.2fr 0.4fr;
+     gap: 0px 0px;
+     grid-template-areas: 
+     "T"
+     "I";
+     margin-bottom: 1em;
+     width: 100%;
+     transition: all 1s ease;
+     transform: translateY(40%);
+     opacity: 0;
+     padding: 0.5em;
+}
+
+.slideFadeIn {
+     opacity: 1;
+     transform: translateY(0%);
+     opacity: 1;
+}
+
+
+.thumbnail {
+     position: relative;
+     min-height: 50vh;
+     height: auto;
+     grid-area: T;
+}
+
+.anim-state {
+     visibility: hidden;
+     opacity: 0;
+     position: absolute;
+     bottom: 12px;
+     right: 0;
+     transition: all 1s ease;
+}
+
+.anim-thumbnail {
+     width: 100%;
+     height: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 0% 0%;
+     overflow: hidden;
+     border-radius: 0.5em 0.5em 0 0;
+     transition: all 1s ease;
+
+     animation: backgroundAnim 5s ease infinite;
+     animation-play-state: paused;
+}
+
+.anim-thumbnail:hover {
+     animation-play-state: running;
+}
+
+.anim-thumbnail:hover ~ .anim-state {
+     opacity: 1;
+     visibility: visible;
+}
+
+@keyframes backgroundAnim {
+     0% {
+          background-position: 0 0;
+     }
+     20% {
+          background-position: 50% 0;
+     }
+     40% {
+          background-position: 50% 50%;
+     }   
+     60% {
+          background-position: 100% 100%;
+     }   
+     80% {
+          background-position: 0 100%;
+     }   
+     100% {
+          background-position: 0 0;
+     }     
+}
+
+.card {
+     grid-area: I;
+     margin: 0;
+     padding: 0.5em 0;
+     background: var(--TAGLINE_BG_COLOR);
+     border-radius: 0 0 0.5em 0.5em;
+}
+
+.box > .title {
+     padding: 0.5em;
+}
+
+.p-text {
+     padding: 0.4em 1em;
+}
+
+.tag {
+     display: inline-block;
+     padding: 0.2em;
+     margin: 0.2em;
+     color: #ece9e9;
+}
+
+.value {
+     color: #ece9e9;
+     max-width: 8em;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     transition: all 1s ease;
+}
+
+.value a {
+     color: inherit;
+     text-decoration: none;
+}
+
+.value:hover a {
+     text-decoration: underline;
+}
+
+.pill {
+     white-space: nowrap;
+     padding: 0.4em 0.5em;
+     margin-right: 1em;
+     border-radius: 0.4em;
+     background: var(--PILL_BG);
+     transition: all 0.2s ease;
+}
+
+@media screen and (min-width: 768px) {
+     .projects-container {
+          width: 80vw;
+          max-width: 900px;
+          margin: 2em auto;
+     }
+
+     .projects-container * {
+          font-size: 1rem;
+     }
+
+     .box {
+          display: grid;
+          grid-template-columns: 1.6fr 0.4fr;
+          grid-template-areas: "T I";
+          grid-template-rows: 1fr;
+          gap: 0px 0px;
+          margin: 3em 0;
+          box-shadow: 0 5px 15px -6px rgba(0, 0, 0, 0.5);
+          border-radius: 1em;
+          min-height: 500px;
+          padding: 0;
+     }
+
+     .thumbnail {
+          padding: 0;
+     }
+
+     .anim-thumbnail {
+          border-radius: 1em 0 0 1em;
+     }
+
+     .card {
+          padding: 0.5em 0;
+          border-radius: 0 1em 1em 0;
+          z-index: 1;
+     }
+}

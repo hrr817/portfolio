@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import './style.css';
 
 const Contact = () => {
      
      const { register, handleSubmit, errors } = useForm();
+     const [sent, setSent] = useState(false);
 
      const submitHandler = (data) => {
           window.open(`mailto:ryuu887@gmail.com?subject=${data.subject}&body=Hi, I am ${data.name}.\n${data.message}`)
+          setSent(true)
      }
 
      return (
+          sent? <div className="flex column justify-center align-center thankyou" style={{height: '68vh', textAlign: 'center'}}>
+               Thank you for emailing. <br/>
+               I'll try to reply as soon as possible.
+               <span onClick={() => setSent(false)} style={{cursor: 'pointer', textDecoration: 'underline'}}> Have more to say? Email again!</span>
+          </div> : 
           <form className="contact-form flex column" onSubmit={handleSubmit(submitHandler)}>
                <div className="field">
                     { errors.name && 

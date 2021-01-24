@@ -37,7 +37,7 @@ const About = ({itemIndex}) => {
                     <h1> Present </h1>
                     <p> 
                          I am learning web technologies and improving my current skills. <br/>
-                         Also, looking for intership/jobs as a front-end developer. 
+                         Also, looking for internship/jobs as a front-end developer. 
                          <br/> <br/>
                          I love playing chess, reading comics, novels and books, learning new skills, listening to jpop and watching anime.
                          <br/><br/>

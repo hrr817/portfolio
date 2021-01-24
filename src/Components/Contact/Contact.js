@@ -8,7 +8,7 @@ const Contact = () => {
      const [sent, setSent] = useState(false);
 
      const submitHandler = (data) => {
-          window.open(`mailto:ryuu887@gmail.com?subject=${data.subject}&body=Hi, I am ${data.name}.\n${data.message}`)
+          window.open(`mailto:itshrr17@gmail.com?subject=${data.subject}&body=Hi, I am ${data.name}.\n${data.message}`)
           setSent(true)
      }
 

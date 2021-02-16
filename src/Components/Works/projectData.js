@@ -12,7 +12,7 @@ const projectData = [
     imageUrl: qconnectUrl,
     host_name: "firebase",
     hostUrl: "https://qconnect-a946a.web.app/",
-    repo_name: "private",
+    repo_name: "private/github",
     repoUrl: "https://github.com/hrr817/qconnect.git",
     status: "30%",
     tags: ["react", "firebase", "chat"],

@@ -4,19 +4,8 @@ import plutusUrl from "../../assets/thumbnails/plutus.jpg";
 import calculatorUrl from "../../assets/thumbnails/calculator.jpg";
 import akatsukiUrl from "../../assets/thumbnails/akatsuki.jpg";
 import morvinandanUrl from "../../assets/thumbnails/morvinandan.jpg";
-import qconnectUrl from "../../assets/thumbnails/qconnect.jpg";
 
 const projectData = [
-  {
-    name: "qconnect-react-firebase",
-    imageUrl: qconnectUrl,
-    host_name: "firebase",
-    hostUrl: "https://qconnect-a946a.web.app/",
-    repo_name: "private/github",
-    repoUrl: "https://github.com/hrr817/qconnect.git",
-    status: "30%",
-    tags: ["react", "firebase", "chat"],
-  },
   {
     name: "weatherapp-react",
     imageUrl: weatherappUrl,

@@ -5,7 +5,7 @@ const Intro = () => {
           <section className="profile">
                <h1> Hi, there! </h1>
                <span className="name"> I am Hem Raj. </span>
-               <span className="sub"> I love building user interfaces. </span>
+               <span className="sub"> I love playing around with technologies. </span>
           </section>
      )
 }

@@ -6,16 +6,18 @@ import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import './style.css';
 
 const Navbar = ({ itemIndex, setItemIndex }) => {
-
-     const [theme, setTheme] = useState(0);
+     const DARK_THEME = localStorage.getItem('theme') === 'dark';
+     const [theme, setTheme] = useState(DARK_THEME ? 1 : 0);
      const [transform, setTransform] = useState(null);
 
      useEffect(() => {
           const html = document.getElementsByTagName('html')[0];
           if(theme) {
                html.setAttribute('data-theme', 'dark');
+               localStorage.setItem('theme', 'dark');
           } else {
                html.removeAttribute('data-theme');
+               localStorage.removeItem('theme');
           }
      }, [theme])
 
@@ -46,16 +48,16 @@ const Navbar = ({ itemIndex, setItemIndex }) => {
      return (
           <div className="navbar">
                <div className="object-container">
-                    <span style={itemIndex === 0? transform : {}}
-                    className={`square one${itemIndex === 0? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 0? undefined : 0)}>
+                    <span style={itemIndex === 1? transform : {}}
+                    className={`square one${itemIndex === 1? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 1? -1 : 1)}>
                          About
                     </span>
-                    <span style={itemIndex === 1? transform : {}}
-                    className={`square two${itemIndex === 1? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 1? undefined : 1)}>
+                    <span style={itemIndex === 2? transform : {}}
+                    className={`square two${itemIndex === 2? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 2? -1 : 2)}>
                          Works
                     </span>
-                    <span style={itemIndex === 2? transform : {}}
-                    className={`square three${itemIndex === 2? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 2? undefined : 2)}>
+                    <span style={itemIndex === 3? transform : {}}
+                    className={`square three${itemIndex === 3? ' to-title': ''}`} onClick={() => setItemIndex(prev => prev === 3? -1 : 3)}>
                          Contact
                     </span>
                     <span className="setting" onClick={toggleTheme}>

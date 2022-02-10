@@ -5,14 +5,15 @@ import Works from './Works/Works'
 import Contact from './Contact/Contact';
 
 const Container = ({ itemIndex }) => {
+     console.log(itemIndex)
      return (
           <>
           {
                (() => {
                     switch (itemIndex) {
-                         case 0: return <div className="app-container"><About itemIndex={itemIndex}/></div>;
-                         case 1: return  <Works/>;
-                         case 2: return <div className="app-container"><Contact /></div>;
+                         case 1: return <div className="app-container"><About itemIndex={itemIndex}/></div>;
+                         case 2: return  <Works/>;
+                         case 3: return <div className="app-container"><Contact /></div>;
                          default: return;
                     }  
                })()

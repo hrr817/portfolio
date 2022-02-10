@@ -5,7 +5,6 @@ import Works from './Works/Works'
 import Contact from './Contact/Contact';
 
 const Container = ({ itemIndex }) => {
-     console.log(itemIndex)
      return (
           <>
           {

@@ -41,13 +41,13 @@ const About = ({ itemIndex }) => (
             <br/> <br/>
             <h1> Little more... </h1>
             <p> 
-                I love playing chess, exercising, reading comics, novels and books, learning new skills, listening to J-pop and watching anime.
+                I love playing chess, exercising, reading manga, novels, and books, learning new skills, listening to J-pop and watching anime.
                 <br/><br/>
                 Have something in mind, make use of words, write me at <a href="mailto:itshrr17@gmail.com" style={{color: 'inherit', transition: 'color 0.2s linear'}}>itshrr17@gmail.com</a> 
             </p>
         </article>
         <div className="flex column justify-center align-center">
-            <a style={{padding: '1em', color: 'inherit', transition: 'color 0.2s linear'}} href="/resume.pdf" download>Check out my resume</a>
+            <a style={{padding: '1em', color: 'inherit', transition: 'color 0.2s linear'}} href="/Resume.pdf" download>Check out my resume</a>
             <a href="https://github.com/hrr817"><span className="icon fadeIn"><GithubIcon/></span></a>
         </div>
     </div>

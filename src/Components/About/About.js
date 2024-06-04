@@ -38,9 +38,9 @@ const About = ({ itemIndex }) => (
                 Though, I still have endless things more to learn and <strong style={{ fontWeight: 700, fontSize: '1.3rem' }}>"I know nothing."</strong><br/>
             </p>
             <br/> <br/>
-            <h1 style={{ color: '#84b84d' }}> back to learning </h1>
+            <h1 style={{ color: '#84b84d' }}> Back to learning </h1>
             <p> 
-                After working for 2 years, I have left working and being back to being a student again. Learning about machine learning and AI.<br/>
+                After working for two years, I have left working and being back to being a student again. Learning about machine learning and AI.<br/>
                 Currently, learning mathematics required for machine learning.<br/>
                 Trying to understand fasinating math behind machine learning models.<br/>
                 Aim is to build models from scratch, and have deep understanding of machine learning models...<br/>

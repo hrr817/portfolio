@@ -54,7 +54,7 @@ const About = ({ itemIndex }) => (
             </p>
         </article>
         <div className="flex column justify-center align-center">
-            <a style={{padding: '1em', color: 'inherit', transition: 'color 0.2s linear'}} href="/Resume.pdf" download>Check out my resume</a>
+            <a style={{padding: '1em', color: 'inherit', transition: 'color 0.2s linear'}} href="/resume.pdf" download>Check out my resume</a>
             <a href="https://github.com/hrr817"><span className="icon fadeIn"><GithubIcon/></span></a>
         </div>
     </div>

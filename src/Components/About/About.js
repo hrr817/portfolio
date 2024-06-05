@@ -36,9 +36,16 @@ const About = ({ itemIndex }) => (
                 I started working on their web-based product. With the help of other developers, I was able to learn a lot. <br/>
                 I learned how to work with a team, write better code and technologies that were new to me.<br/>
                 Though, I still have endless things more to learn and <strong style={{ fontWeight: 700, fontSize: '1.3rem' }}>"I know nothing."</strong><br/>
-                I'm still working in the same company as a Software Developer.
             </p>
             <br/> <br/>
+            <h1 style={{ color: '#84b84d' }}> back to learning </h1>
+            <p> 
+                After working for 2 years, I have left working and being back to being a student again. Learning about machine learning and AI.<br/>
+                Currently, learning mathematics required for machine learning.<br/>
+                Trying to understand fasinating math behind machine learning models.<br/>
+                Aim is to build models from scratch, and have deep understanding of machine learning models...<br/>
+                
+            </p>
             <h1> Little more... </h1>
             <p> 
                 I love playing chess, exercising, reading manga, novels, and books, learning new skills, listening to J-pop and watching anime.
